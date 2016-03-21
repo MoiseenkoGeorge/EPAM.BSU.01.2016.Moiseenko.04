@@ -22,5 +22,9 @@ namespace Task3
             PlaceName = placeName;
             Mentor = mentor;
         }
+        public void AddStudent(Student student)
+        {
+            studentList.Add(student);
+        }
     }
 }

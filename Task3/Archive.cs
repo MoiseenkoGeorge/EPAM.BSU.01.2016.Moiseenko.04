@@ -6,9 +6,19 @@ using System.Threading.Tasks;
 
 namespace Task3
 {
-    class Archive
+    public sealed class Archive
     {
-        List<Mark> markList;
-
+        private List<Mark> markList;
+        public static readonly Lazy<Archive> instance =
+            new Lazy<Archive>(() => new Archive());
+        public static Archive Instance { get { return instance.Value;} } 
+        private Archive()
+        {
+            markList = new List<Mark>();
+        }
+        public void AddMark(Mark mark)
+        {
+            instance.Value.markList.Add(mark);
+        }
     }
 }

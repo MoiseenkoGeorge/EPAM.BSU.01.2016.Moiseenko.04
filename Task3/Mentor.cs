@@ -9,9 +9,7 @@ namespace Task3
     public class Mentor : IPerson
     {
         public DateTime Birthday { get; }
-
         public string Name { get; }
-
         public Sex Sex { get; }
         List<Course> courseList;
         public Mentor(string name,string birthday,Sex sex)
@@ -23,6 +21,10 @@ namespace Task3
         public void CreateCourse(Course course)
         {
             courseList.Add(course);
+        }
+        public void AssignMark(Mark mark)
+        {
+            Archive.Instance.AddMark(mark);
         }
     }
 }

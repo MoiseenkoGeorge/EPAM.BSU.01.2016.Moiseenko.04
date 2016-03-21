@@ -18,12 +18,11 @@ namespace Task3
             Name = name;
             Sex = sex;
             Birthday = DateTime.Parse(birthday);
-
         }
 
         public void Subscribe(Course course)
         {
-
+            course.AddStudent(this);
         }
     }
 }

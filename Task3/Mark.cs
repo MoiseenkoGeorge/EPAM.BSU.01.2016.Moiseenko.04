@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Task3
 {
-    struct Mark
+    public struct Mark
     {
-        int? value;
+        int value;
         Student student;
         Course course;
     }
